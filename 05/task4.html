@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+    for(var j = 1000; j < 10000; j++){
+        var x = j;
+
+        var b1 = x%10;//4 цифра
+
+        x = Math.floor(x/10);//убираем 4 цифру
+
+        var b2 = x%10;//3 цифра
+
+        x = Math.floor(x/10);//убираем 3 цифру
+
+        var b3 = x%10;//2 цифра
+
+        var b4 = Math.floor(x/10);//1 цифра
+
+        var sum = b1 + b2 + b3 + b4;//сумма цифр
+        if(sum === 15){
+            console.log(j);
+        }
+    }
+</script>
+</body>
+</html>

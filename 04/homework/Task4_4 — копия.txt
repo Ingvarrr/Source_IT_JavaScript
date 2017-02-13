@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script>
+	for (var i=1000; i<10000; i++){
+		var x=i;
+		var a1=x%10;
+		x=Math.floor(x/10);
+		var a2=x%10;
+		x=Math.floor(x/10);
+		var a3=x%10;
+		var a4=Math.floor(x/10);
+		var sum = a1+a2+a3+a4;
+			if (sum===15){
+				console.log(i);
+		}
+	}
+</script>

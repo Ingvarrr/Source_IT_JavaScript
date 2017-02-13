@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+	var a = parseInt(prompt('input a'));
+	var count=0;
+	while (a>0){
+		var num=a%10;
+		if (num%2===0 && num!=0){
+			count++;
+		}
+		a=Math.floor(a/10);
+	}
+	console.log(count);
+	</script>

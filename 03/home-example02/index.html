@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    var a = b = -2;
+    var x = parseFloat(prompt('input x'));
+    var y = parseFloat(prompt('input y'));
+
+    var line = x/a + y/b;
+    var circle = Math.pow(x, 2) + Math.pow(y, 2);
+    circle = Math.sqrt(circle);
+    console.log(line);
+    if((x <= 0 && y <= 0 && line == 1) || circle <= 1){
+        alert('Success');
+    }else{
+        alert('Error');
+    }
+</script>

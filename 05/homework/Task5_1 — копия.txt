@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+	var n = parseInt(prompt('input N'));
+	var x=n%10;
+	switch (x){
+		case 1:
+		console.log('У Пети ' + n + ' яблоко');
+		break;
+		case 2: 
+		case 3:
+		case 4:
+		console.log('У Пети ' + n + ' яблокa');
+		break;
+		case 2:
+		case 6: 
+		case 7:
+		case 8:
+		case 9:
+		console.log('У Пети ' + n + ' яблокa');
+		break;
+		case 0: 
+		case 5:
+		console.log('У Пети ' + n + ' яблок');
+		break;
+	}
+</script>

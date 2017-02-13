@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+
+    <script src="js/prompt-float.js"></script>
+    <script>
+        function foo() {
+            var a = 10;
+            var b = 5;
+
+            return a + b;
+        }
+
+        //var baz = foo;
+
+
+        function myAlert(msg) {
+            alert(msg);
+        }
+
+        function baz(a, b) {//a = 5, b = foo
+            a = a || 0;
+            b = b || 0;
+            console.log(a + " " + b);
+            b('BAZ');
+        }
+
+        function bar(a, b) {
+            console.log(a + " " + b);
+            b('BAR');
+        }
+
+        /*baz(4, function (msg) {// a = 4, b =
+            console.log(msg);
+        });*/
+
+        //bar(5, myAlert);
+
+        function multiply(min, max, callback) {
+            var mul = 1;
+
+            for(var i = min; i <= max; i++){
+                mul *= i;
+            }
+            callback(mul);
+        }
+
+       /* var m = promptFloat('input min');
+        var n = promptFloat('input max');*/
+
+        /*multiply(2, 4, function (mul) {//min = 2, max = 5, callback
+            alert("Result: "+mul);
+        });*/
+
+        /*function hw1() {
+            function task1() {
+
+            }
+
+            function task2() {
+
+            }
+        }
+
+        function hw2() {
+            function task1() {
+
+            }
+
+            function task2() {
+
+            }
+        }*/
+
+        function magic(a, b) {
+
+            return function () {
+                var a = 4444444;
+                alert('MAGIC ' + a);
+
+            }
+        }
+
+        var x = magic(23, 4);
+
+        //magic(23, 4)();
+
+
+        var m = 10;
+
+        /*var Mod = (function () {
+
+            this.x = function () {
+                alert('Magic');
+            };
+
+            return this;
+
+        })();
+
+        Mod.x();*/
+
+    </script>
+</body>
+</html>

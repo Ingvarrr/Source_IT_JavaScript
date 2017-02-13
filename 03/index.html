@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test page</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //цикл с предусловием
+    var day = 1;
+    var dayCount = 7;
+
+    /*while (day <= dayCount){
+        console.log(day);
+        day++;
+    }*/
+
+    var n = parseInt(prompt('input n'));
+    var i = 0;
+    while (i <= n){
+        if(i % 2 !== 0){
+            //break;
+            i++;
+            continue;
+        }
+
+        //console.log(i);
+        i++;
+    }
+
+    i = 10;
+
+    do {
+        //console.log(i);
+        document.body.innerHTML += i + "<br>";
+        i++;
+    }while (i <= n);
+
+</script>

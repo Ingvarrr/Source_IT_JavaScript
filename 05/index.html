@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 5</title>
+</head>
+<body>
+<script>
+    for (var i = 35; i <= 87; i++){
+        if(i%7 === 1 || i%7 === 2 || i%7 === 5){
+            //console.log(i + ": " + i%7);
+        }
+    }
+
+    //console.log('-----------------------');
+
+    var m = 35,
+        n = 87;
+
+    while (m <= n){
+        if(m%7 === 1 || m%7 === 2 || m%7 === 5){
+            //console.log(m + ": " + m%7);
+        }
+        m++;
+    }
+
+    var a = parseInt(prompt('input a'));
+
+    var a1 = a%10;
+    a = Math.floor(a/10);
+    var a2 = a%10;
+
+    var a3 = Math.floor(a/10);
+
+    var z = a1 * a2 * a3;
+
+    //console.log(a3 + " * " + a2 + " * " + a1 + " = " + z);
+
+
+    var x = parseInt(prompt('input a'));
+    var count = 0;
+    while(x > 0){
+        var num = x%10;
+        if(num%2 === 0 && num !== 0){
+            count++;
+        }
+        x = Math.floor(x/10);
+    }
+
+    //console.log(count);
+
+    var f = 10;
+    var c = 5;
+    var k = !isNaN(f) ? f : c; //аналог if - тернарный оператор
+    //var k = !isNaN(f) ? f : (c == 4) ? f : 0; //так не делать!!!!
+
+    var p = prompt('dddddd');
+
+    var d = p || 0; //значение по умолчанию 0
+    alert(d);
+
+    var day = 3;
+
+    switch (day){
+        case 1:
+            console.log('Понедельник');
+            break;
+        case 2:
+            console.log('Вторник');
+            break;
+        case 3:
+            console.log('Среда');
+            var g = 5 + 9;
+            console.log(g);
+            break;
+        case 4:
+            console.log('Четверг');
+            break;
+        case 5:
+            console.log('Пятница');
+            break;
+        case 6:
+            console.log('Суббота');
+            break;
+        case 7:
+            console.log('Воскресенье');
+            break;
+        default:
+                console.warn('Error 404. Day not Found!');
+            break;
+    }
+
+    //так не стоит делать!!!!
+    x = parseInt(prompt('input a'));
+    switch (true){
+        case x > 0:
+                console.log(10/x);
+            break;
+        case x == 2:
+            console.log(10/x + 1);
+            break;
+        case x == 0:
+                console.warn('Divide by zero!');
+            break;
+    }
+    //так не стоит делать!!!!
+
+</script>
+</body>
+</html>

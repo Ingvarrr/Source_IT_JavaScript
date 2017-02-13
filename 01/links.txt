@@ -1,0 +1,2 @@
+http://learn.javascript.ru - учебник по javacript
+http://pro-prof.com/archives/1462 - блоксхемы

@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<script>
+	var m=prompt('Введите число M');
+	var n=prompt('Введите число N');
+	var b=m
+	console.log ('Числа в промежутке между M и N')
+	while (++b<n){
+		console.log(b)
+	}
+	var x=0;
+	var c=m=x;
+	while (x<n){
+		c-=x;
+		x++;
+	}
+	alert(c);
+	var t=0;
+	var i=m=t;
+	console.log ('Квадраты чисел между M и N')
+	while (++t<n){
+		i=Math.pow(t,2);
+		console.log(i);
+	}
+</script>

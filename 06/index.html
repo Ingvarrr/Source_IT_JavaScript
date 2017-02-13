@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 6</title>
+    <script src="js/prompt-float.js"></script>
+</head>
+<body>
+<script>
+    var sum = function (a, b) {
+        return a + b;
+    };
+
+   // mul();
+    function mul() {
+
+        var max = 10;
+        var a = promptFloat('Input a*', -10);
+        var b = promptFloat('Input b*', 1, max);
+        var res = a * b;
+        alert(res);
+    }
+
+
+   // var a = promptFloat('Input a');
+   // var b = promptFloat('Input b', 1, 1000);
+   // alert(sum(a, b));
+
+
+    function showNumbers(min, max, callback){
+        for (var i = min; i <= max; i++){
+            console.log(i);
+        }
+        callback('success');
+    }
+
+    var m = promptFloat('Input M');
+    var n = promptFloat('Input N');
+
+    /*showNumbers(m, n, function (str) {
+        for(var i = -10; i <= -1; i++){
+            console.log(i);
+        }
+        alert(str);
+    });*/
+
+    function walkNumbers(min, max, fn) {
+        for(var i = min; i <= max; i++){
+            if(typeof fn === 'function'){
+                fn(i);
+            }else{
+                console.error('fn is not a function!');
+                return false;
+            }
+        }
+    }
+
+    walkNumbers(m, n, function (item) {
+        console.log(Math.pow(item, 2))
+    });
+
+    //walkNumbers(m, n, "sdsds");//ошибка!!!
+
+    function foo(msg) {
+        function bar() {
+            alert(msg);
+        }
+        bar();
+    }
+    //foo('dddd');
+    var asd = 'asdasd';
+
+    function baz() {
+        alert(asd);
+        var asd = 'sdsdsdsdsdsd';
+    }
+    //baz();
+    //alert(asd);
+
+    function barBaz(msg) {
+        alert(msg);
+        return function (arg) {
+            alert(arg);
+        }
+    }
+    barBaz('MSG')('FUNCTION');
+
+    var fn = barBaz('MSG');
+    fn('NEWWWWWW');
+</script>
+</body>
+</html>
